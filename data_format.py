@@ -20,6 +20,7 @@ class BaseLetters(object):
         self.m_index_letter_dict = dict()
         self.m_letter_index_dict = dict()
         self.m_letter_list = list()
+        self.m_max = 30
 
 
 class TamilLetters(BaseLetters):
@@ -104,7 +105,21 @@ def string2Letter(f_str, f_letters=BaseLetters()):
         else:
             out_list.append(f_letters.m_index_letter_dict[f_letters.m_letter_index_dict['-']])
 
+    out_list.append(f_letters.m_index_letter_dict[f_letters.m_letter_index_dict['-1']])
     return out_list
+
+
+def index2string(f_indices, f_letters=BaseLetters()):
+    out_list = []
+
+    for i in f_indices:
+        out_str = f_letters.m_index_letter_dict[i].str
+        if out_str == '-1':
+            break
+        out_list.append(out_str)
+
+    out_str = "".join(out_list)
+    return out_str
 
 
 if __name__ == "__main__":
@@ -115,6 +130,6 @@ if __name__ == "__main__":
     print('English Letters: ', EL.m_index_letter_dict)
     # print(lines[0][2])
 
-    out = string2Letter(u'தகப்பன் தன் பிள்ளைகள் மேல்', EL)
+    out = string2Letter(u'தகப்பன் தன் பிள்ளைகள் மேல்', TL)
 
     print(out)
