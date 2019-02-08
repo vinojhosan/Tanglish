@@ -64,7 +64,8 @@ def text_generator():
             input_mat[itr] = t_encoded
             output_mat[itr] = e_encoded
 
-        yield input_mat, output_mat
+        # yield input_mat, output_mat
+        yield output_mat, input_mat
 
 
 # for k in text_generator():
