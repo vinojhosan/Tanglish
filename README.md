@@ -21,4 +21,4 @@ keras
 ## Authors
 
 * **Vinoj John Hosan** - [Connect](www.linkedin.com/in/vinoj-john-hosan)
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=vinojhosan)](https://github.com/anuraghazra/github-readme-stats?count_private=true)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=vinojhosan&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
